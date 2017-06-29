@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Route from './Route'
+import Route from './routes/RouteList'
+import RouteAdd from './routes/RouteAdd'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <p>
           Hello, I am your friendly route tracking app.
         </p>
+        <RouteAdd/>
         <Route/>
       </div>
     );
