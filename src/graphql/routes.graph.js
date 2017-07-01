@@ -11,10 +11,19 @@ export const fetchAllRoutes = gql`
 `
 
 export const addRoute = gql`
-  mutation addRoute($name: String!) {
+  mutation ($name: String!) {
     createRoute(name: $name) {
       id
       name
     }
   }
+`
+
+export const removeRoute = gql`
+  mutation ($id: ID!) {
+  deleteRoute(id: $id) {
+    id
+    name
+  }
+}
 `

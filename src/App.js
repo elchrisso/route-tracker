@@ -3,6 +3,8 @@ import './App.css';
 
 import Route from './routes/RouteList'
 import RouteAdd from './routes/RouteAdd'
+import RouteDelete from './routes/RouteDelete'
+
 
 class App extends Component {
   render() {
@@ -13,6 +15,7 @@ class App extends Component {
         </p>
         <RouteAdd/>
         <Route/>
+        <RouteDelete/>
       </div>
     );
   }
