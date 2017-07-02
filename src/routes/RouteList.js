@@ -3,20 +3,33 @@ import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import { Table, Button } from 'reactstrap'
 
-import { fetchAllRoutes } from '../graphql/routes.graph'
-import RouteDelete from '../routes/RouteDelete'
+import { fetchAllRoutes, removeRoute } from '../graphql/routes.graph'
 
-class Route extends Component {
+class RouteList extends Component {
+  handleRemoveRoute = (client) => {
+    this.props.mutate({
+      refetchQueries: [{
+        query: fetchAllRoutes
+      }],
+      variables: {
+        id: client.id
+      }
+    })
+  }
+
   render () {
     let routes = null
     if (this.props.data.allRoutes) {
-      routes = this.props.data.allRoutes.map((route, idx) => {
+      routes = this.props.data.allRoutes.map((route) => {
         return (
           <tr key={route.id}>
+            {console.log(route.name + " " + route.style + " " + route.grade)}
             <td>{route.name}</td>
+            <td>{route.style}</td>
+            <td>{route.grade}</td>
             <td>{(route.sent) ? 'Yes' : 'No'}</td>
             <td>
-              <Button color="danger" size="sm" onClick={() => RouteDelete.removeRoute(route)}>Delete This Route</Button>
+              <Button color="danger" size="sm" onClick={() => this.handleRemoveRoute(route)}>Delete This Route</Button>
             </td>
           </tr>
           )
@@ -29,6 +42,8 @@ class Route extends Component {
           <thead>
             <tr>
               <th>Name</th>
+              <th>Style</th>
+              <th>Grade</th>
               <th>Sent</th>
               <th>&nbsp;</th>
             </tr>
@@ -43,4 +58,7 @@ class Route extends Component {
   }
 }
 
-export default graphql(fetchAllRoutes)(Route)
+const withRouteQuery = graphql(fetchAllRoutes, {options: { fetchPolicy: 'network-only' }})(RouteList)
+const withRouteMutation = graphql(removeRoute)(withRouteQuery)
+
+export default withRouteMutation

@@ -6,13 +6,20 @@ export const fetchAllRoutes = gql`
       id
       name
       sent
+      style
+      grade
     }
   }
 `
 
 export const addRoute = gql`
-  mutation ($name: String!) {
-    createRoute(name: $name) {
+  mutation ($name: String!, $style: String!, $grade: String!) {
+    createRoute(
+        name: $name,
+        style: $style,
+        grade: $grade
+    )
+    {
       id
       name
     }
