@@ -4,6 +4,8 @@ import { graphql } from 'react-apollo'
 import { addRoute } from '../graphql/routes.graph'
 import { Row, Col, Button } from 'reactstrap'
 
+import { fetchAllRoutes } from '../graphql/routes.graph'
+
 class RouteAdd extends Component {
   constructor () {
     super ()
@@ -16,9 +18,10 @@ class RouteAdd extends Component {
 
   addRoute = (evt) => {
     evt.preventDefault()
-
-    console.log(this.state.style + " " + this.state.grade)
     this.props.mutate({
+      refetchQueries: [{
+        query: fetchAllRoutes
+      }],
       variables: {
         name: this.state.name,
         style: this.state.style,
