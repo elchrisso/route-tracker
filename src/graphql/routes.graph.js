@@ -34,3 +34,11 @@ export const removeRoute = gql`
   }
 }
 `
+
+export const sendRoute = gql`
+  mutation ($id: ID!, $sent: Boolean) {
+    updateRoute(id: $id, sent: $sent) {
+      id
+    }
+  }
+`
