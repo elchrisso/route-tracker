@@ -29,6 +29,9 @@ class RouteList extends Component {
             <td>{route.grade}</td>
             <td>{(route.sent) ? 'Yes' : 'No'}</td>
             <td>
+              <Button color="success" size="sm">Send It!</Button>
+            </td>
+            <td>
               <Button color="danger" size="sm" onClick={() => this.handleRemoveRoute(route)}>Delete This Route</Button>
             </td>
           </tr>
@@ -45,6 +48,7 @@ class RouteList extends Component {
               <th>Style</th>
               <th>Grade</th>
               <th>Sent</th>
+              <th>&nbsp;</th>
               <th>&nbsp;</th>
             </tr>
           </thead>
