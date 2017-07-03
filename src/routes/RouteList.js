@@ -3,16 +3,27 @@ import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import { Table, Button } from 'reactstrap'
 
-import { fetchAllRoutes, removeRoute } from '../graphql/routes.graph'
+import { fetchAllRoutes, removeRoute, sendRoute } from '../graphql/routes.graph'
 
 class RouteList extends Component {
-  handleRemoveRoute = (client) => {
+  handleRemoveRoute = (route) => {
     this.props.mutate({
       refetchQueries: [{
         query: fetchAllRoutes
       }],
       variables: {
-        id: client.id
+        id: route.id
+      }
+    })
+  }
+
+  handleSendRoute = (route) => {
+    this.props.mutate({
+      refetchQueries: [{
+        query: fetchAllRoutes
+      }],
+      variables: {
+        sent: route.sent
       }
     })
   }
@@ -29,7 +40,7 @@ class RouteList extends Component {
             <td>{route.grade}</td>
             <td>{(route.sent) ? 'Yes' : 'No'}</td>
             <td>
-              <Button color="success" size="sm">Send It!</Button>
+              <Button color="success" size="sm" onClick={() => this.handleSendRoute(route)}>Send It!</Button>
             </td>
             <td>
               <Button color="danger" size="sm" onClick={() => this.handleRemoveRoute(route)}>Delete This Route</Button>
@@ -47,7 +58,7 @@ class RouteList extends Component {
               <th>Name</th>
               <th>Style</th>
               <th>Grade</th>
-              <th>Sent</th>
+              <th>Sent?</th>
               <th>&nbsp;</th>
               <th>&nbsp;</th>
             </tr>
@@ -64,5 +75,6 @@ class RouteList extends Component {
 
 const withRouteQuery = graphql(fetchAllRoutes, {options: { fetchPolicy: 'network-only' }})(RouteList)
 const withRouteMutation = graphql(removeRoute)(withRouteQuery)
+const withSendRouteMutation = graphql(sendRoute)(withRouteQuery)
 
 export default withRouteMutation
