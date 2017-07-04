@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
-
 import { Jumbotron } from 'reactstrap'
 
+import { fetchRouteById } from '../graphql/routes.graph'
+
 class RockRouteDetail extends Component {
+
   render() {
     return (
-      <Jumbotron>
-        {this.state.route[0].name}
-      </Jumbotron>
+      <div>
+        <Jumbotron>
+          <h6>Route Details</h6>
+          hello again
+        </Jumbotron>
+      </div>
     )
   }
 }

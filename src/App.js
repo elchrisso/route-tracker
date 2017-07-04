@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import RockRouteList from './routes/RouteList'
+import RockRouteList from './routes/RockRouteList'
 import RockRouteAdd from './routes/RouteAdd'
 import { Jumbotron } from 'reactstrap'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import RockRouteDetail from './routes/RockRouteDetail'
 
@@ -19,8 +19,10 @@ class App extends Component {
           <h4>I am your friendly route tracking app, keeping grades soft since 2017.</h4>
         </Jumbotron>
         <RockRouteAdd/>
-        <Route exact path="/" component={RockRouteList}/>
-        <Route exact path="/Rock" component={RockRouteDetail}/>
+        <Switch>
+          <Route exact path="/" component={RockRouteList}/>
+          <Route exact path="/rockroutedetail" component={RockRouteDetail}/>
+        </Switch>
       </div>
     );
   }

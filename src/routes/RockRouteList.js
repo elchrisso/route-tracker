@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 
 import { graphql } from 'react-apollo'
 import { Table, Button } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 import { fetchAllRoutes, removeRoute, sendRoute } from '../graphql/routes.graph'
 
-class RouteList extends Component {
+class RockRouteList extends Component {
   handleRemoveRoute = (route) => {
     this.props.mutate({
       refetchQueries: [{
@@ -35,7 +36,11 @@ class RouteList extends Component {
         return (
           <tr key={route.id}>
             {console.log(route.name + " " + route.style + " " + route.grade)}
-            <td>{route.name}</td>
+            <td>
+              <NavLink onClick={console.log("setState here")} to="/rockroutedetail">
+                {route.name}
+              </NavLink>
+            </td>
             <td>{route.style}</td>
             <td>{route.grade}</td>
             <td>{(route.sent) ? 'Yes' : 'No'}</td>
@@ -73,7 +78,7 @@ class RouteList extends Component {
   }
 }
 
-const withRouteQuery = graphql(fetchAllRoutes, {options: { fetchPolicy: 'network-only' }})(RouteList)
+const withRouteQuery = graphql(fetchAllRoutes, {options: { fetchPolicy: 'network-only' }})(RockRouteList)
 const withRouteMutation = graphql(removeRoute)(withRouteQuery)
 const withSendRouteMutation = graphql(sendRoute)(withRouteQuery)
 
