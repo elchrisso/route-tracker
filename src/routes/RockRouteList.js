@@ -30,6 +30,10 @@ class RockRouteList extends Component {
   }
 
   render () {
+    function loadRockRoute () {
+      console.log("i am your loadRockRoute function, but all i do right now is log to console.")
+    }
+
     let routes = null
     if (this.props.data.allRoutes) {
       routes = this.props.data.allRoutes.map((route) => {
@@ -37,7 +41,7 @@ class RockRouteList extends Component {
           <tr key={route.id}>
             {console.log(route.name + " " + route.style + " " + route.grade)}
             <td>
-              <NavLink onClick={console.log("setState here")} to="/rockroutedetail">
+              <NavLink onClick={loadRockRoute} to="/rockroutedetail">
                 {route.name}
               </NavLink>
             </td>
