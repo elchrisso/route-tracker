@@ -17,6 +17,7 @@ export const fetchRouteById = gql`
     Route(id: $id) {
       id
       name
+      grade
     }
   }
 `

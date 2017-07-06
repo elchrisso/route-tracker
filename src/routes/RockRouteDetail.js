@@ -7,14 +7,20 @@ import { fetchRouteById } from '../graphql/routes.graph'
 class RockRouteDetail extends Component {
 
   render() {
-    let routeName = (this.props.data.hasOwnProperty('Route') && this.props.data.Route !== null) ? this.props.data.Route.name : null
-
+    let rockRouteName = null
+    let grade = null
+    if (this.props.data.hasOwnProperty('Route') && this.props.data.Route !== null) {
+      rockRouteName = this.props.data.Route.name
+      grade = this.props.data.Route.grade
+      console.log(this.props.data)
+    }
 
     return (
       <div>
         <Jumbotron>
           <h6>Route Details</h6>
-          {routeName}
+          {console.log(rockRouteName + grade)}
+          {rockRouteName} {grade}
         <br/>
           there should be a route name above this line
         </Jumbotron>
