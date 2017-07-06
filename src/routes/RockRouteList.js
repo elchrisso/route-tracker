@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { graphql } from 'react-apollo'
 import { Table, Button } from 'reactstrap'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { fetchAllRoutes, removeRoute, sendRoute } from '../graphql/routes.graph'
 
@@ -41,9 +41,9 @@ class RockRouteList extends Component {
           <tr key={route.id}>
             {console.log(route.name + " " + route.style + " " + route.grade)}
             <td>
-              <NavLink onClick={loadRockRoute} to="/rockroutedetail">
+              <Link to={`/rockroutedetail/${route.id}`}>
                 {route.name}
-              </NavLink>
+              </Link>
             </td>
             <td>{route.style}</td>
             <td>{route.grade}</td>

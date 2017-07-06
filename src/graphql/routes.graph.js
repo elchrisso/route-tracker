@@ -13,11 +13,10 @@ export const fetchAllRoutes = gql`
 `
 
 export const fetchRouteById = gql`
-  {
-    allRoutes(id: "cj4mudfcc39bv0132rj93hitg")
-    {
+  query ($id: ID!) {
+    Route(id: $id) {
+      id
       name
-      grade
     }
   }
 `
