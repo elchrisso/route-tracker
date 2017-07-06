@@ -4,7 +4,7 @@ import './App.css';
 import RockRouteList from './routes/RockRouteList'
 import RockRouteAdd from './routes/RouteAdd'
 import { Jumbotron } from 'reactstrap'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 
 import RockRouteDetail from './routes/RockRouteDetail'
 
@@ -18,10 +18,10 @@ class App extends Component {
           <hr className="my-4"/>
           <h4>I am your friendly route tracking app, keeping grades soft since 2017.</h4>
         </Jumbotron>
-        <RockRouteAdd/>
         <Switch>
           <Route exact path="/" component={RockRouteList}/>
           <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
+          <Route exact path="/addrockroute" component={RockRouteAdd}/>
         </Switch>
       </div>
     );

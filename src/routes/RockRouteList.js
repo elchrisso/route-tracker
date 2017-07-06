@@ -76,6 +76,7 @@ class RockRouteList extends Component {
           {routes}
           </tbody>
         </Table>
+        <Link to="addRockRoute">Add A Route</Link>
 
       </div>
     )
