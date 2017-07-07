@@ -18,20 +18,33 @@ export const fetchRouteById = gql`
       id
       name
       grade
+      style
+      description
     }
   }
 `
 
 export const addRoute = gql`
-  mutation ($name: String!, $style: String!, $grade: String!) {
+  mutation ($name: String!, $style: String!, $grade: String!, $description: String) {
     createRoute(
         name: $name,
         style: $style,
-        grade: $grade
+        grade: $grade,
+        description: $description
     )
     {
       id
       name
+    }
+  }
+`
+
+export const editRockRoute = gql`
+  mutation ($id: ID!, $name: name, $style: String) {
+    updateRoute(id: $id, style: $style) {
+      id
+      name
+      style
     }
   }
 `
