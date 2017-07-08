@@ -29,6 +29,10 @@ class RouteAdd extends Component {
         grade: this.state.grade,
         sent: this.state.sent
       }
+    }).then(() => {
+      alert("Added!")
+    }).catch(() => {
+      alert("error")
     })
   }
 
