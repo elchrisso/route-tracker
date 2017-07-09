@@ -85,6 +85,5 @@ class RockRouteList extends Component {
 
 const withRouteQuery = graphql(fetchAllRoutes, {options: { fetchPolicy: 'network-only' }})(RockRouteList)
 const withRouteMutation = graphql(removeRoute)(withRouteQuery)
-const withSendRouteMutation = graphql(sendRoute)(withRouteQuery)
 
 export default withRouteMutation

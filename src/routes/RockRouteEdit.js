@@ -5,30 +5,64 @@ import { graphql } from 'react-apollo'
 import { fetchRouteById, editRockRoute } from '../graphql/routes.graph'
 
 class RockRouteEdit extends Component {
-  render () {
-    let rockRouteName = null
-    let grade = null
-    let style = null
-    let description = null
-    let area = null
+
+  handleSubmit = (evt) => {
+    evt.preventDefault()
+    this.props.mutate({
+      variables: {
+        id: this.props.data.Route.id,
+        ...this.state
+      }
+    }).then(() => {
+      alert('Rock Route Edited!')
+    }).catch((err) => {
+      alert(err)
+    })
+  }
+
+  renderEditRockRouteForm (rockRoute) {
     return (
       <div>
-        <form onSubmit={console.log("Your mom")}>
+        <form onSubmit={this.handleSubmit}>
           <Row>
             <Col>
               <Label for="newNoteText">New Note/Description Text</Label>
-              <Input type="textarea" placeholder="This should be the existing description/note." id="newNoteText"/>
+              <Input type="textarea" defaultvalue={rockRoute.style} onChange={(evt) => this.setState({ style: evt.target.value })}/>
+              <Input type="textarea" defaultValue={rockRoute.description} onChange={(evt) => this.setState({ description: evt.target.value })} id="newNoteText"/>
             </Col>
           </Row>
           <Row>
             <Col>
-              <Button color="success" size="small">Edit Rock Route</Button>
+              <Button type="submit" color="success" size="small">Edit Rock Route</Button>
             </Col>
           </Row>
         </form>
       </div>
     )
   }
+
+  render () {
+    if (this.props.loading) {
+      return <h1>Loading</h1>
+    }
+
+    if (this.props.data.hasOwnProperty('Route') && this.props.data.Route === null) {
+      return <h1>Route not found</h1>
+    }
+
+    if (this.props.data.hasOwnProperty('Route')) {
+      return this.renderEditRockRouteForm(this.props.data.Route)
+    }
+    return null
+  }
 }
 
-export default RockRouteEdit
+const withRockRoute = graphql(fetchRouteById, {
+  options: (ownProps) => ({
+    variables: {
+      id: ownProps.match.params.id
+    }
+  })
+})(RockRouteEdit)
+
+export default graphql(editRockRoute)(withRockRoute)

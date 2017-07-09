@@ -40,11 +40,10 @@ export const addRoute = gql`
 `
 
 export const editRockRoute = gql`
-  mutation ($id: ID!, $name: name, $style: String) {
-    updateRoute(id: $id, style: $style) {
+  mutation ($id: ID!, $description: String, $style: String) {
+    updateRoute(id: $id, description: $description, style: $style) {
       id
       name
-      style
     }
   }
 `

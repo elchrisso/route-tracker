@@ -5,7 +5,7 @@ import RockRouteList from './routes/RockRouteList'
 import RockRouteAdd from './routes/RouteAdd'
 import RockRouteEdit from './routes/RockRouteEdit'
 import { Jumbotron } from 'reactstrap'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import RockRouteDetail from './routes/RockRouteDetail'
 
@@ -23,7 +23,7 @@ class App extends Component {
           <Route exact path="/" component={RockRouteList}/>
           <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
           <Route exact path="/addrockroute" component={RockRouteAdd}/>
-          <Route exact path="/editrockroute" component={RockRouteEdit}/>
+          <Route exact path="/rockroutedetail/:id/edit" component={RockRouteEdit}/>
         </Switch>
       </div>
     );
