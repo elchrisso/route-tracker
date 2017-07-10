@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button, Row, Col, Input, Label } from 'reactstrap'
 import { graphql } from 'react-apollo'
 
-import { fetchRouteById, editRockRoute } from '../graphql/routes.graph'
+import { fetchRouteById, editRockRoute, fetchAllRoutes } from '../graphql/routes.graph'
 
 class RockRouteEdit extends Component {
 
@@ -12,7 +12,10 @@ class RockRouteEdit extends Component {
       variables: {
         id: this.props.data.Route.id,
         ...this.state
-      }
+      },
+      refetchQueries: [{
+        query: fetchAllRoutes
+      }]
     }).then(() => {
       alert('Rock Route Edited!')
     }).catch((err) => {

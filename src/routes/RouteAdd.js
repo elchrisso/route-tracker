@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
 import { graphql } from 'react-apollo'
-import { addRoute } from '../graphql/routes.graph'
 import { Row, Col, Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import { fetchAllRoutes } from '../graphql/routes.graph'
+import { fetchAllRoutes, addRoute } from '../graphql/routes.graph'
 
 class RouteAdd extends Component {
   constructor () {
