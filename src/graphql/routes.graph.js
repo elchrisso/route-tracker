@@ -20,6 +20,10 @@ export const fetchRouteById = gql`
       grade
       style
       description
+      comments {
+        id
+        comment
+      }
     }
   }
 `
@@ -60,6 +64,14 @@ export const removeRoute = gql`
 export const sendRoute = gql`
   mutation ($id: ID!, $sent: Boolean) {
     updateRoute(id: $id, sent: true) {
+      id
+    }
+  }
+`
+
+export const addComment = gql`
+  mutation ($comment: String!, $routeId: ID!) {
+    createComment (comment: $comment, routeId: $routeId) {
       id
     }
   }
