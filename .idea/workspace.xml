@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa380a9-e46e-49cc-92ee-198ea11837c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/logo.svg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/app/App.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/app/App.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="$PROJECT_DIR$/src/app/App.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/backendClient.js" afterPath="$PROJECT_DIR$/src/client.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/routes/shitThumb.jpg" afterPath="$PROJECT_DIR$/src/resources/shitThumb.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/routes/shitThumb.png" afterPath="$PROJECT_DIR$/src/resources/shitThumb.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/reducer.js" afterPath="$PROJECT_DIR$/src/app/reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RockRouteDetail.js" afterPath="$PROJECT_DIR$/src/routes/RockRouteDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store.js" afterPath="$PROJECT_DIR$/src/store.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,10 +22,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="RockRouteList.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="RockRouteList.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/routes/RockRouteList.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
+                <state relative-caret-position="600">
                   <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
@@ -40,7 +34,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/App.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="15">
@@ -179,8 +173,8 @@
           <file leaf-file-name="RockRouteDetail.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/routes/RockRouteDetail.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+                <state relative-caret-position="605">
+                  <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="109" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -331,6 +325,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="route-tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="route-tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="graphql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -381,8 +393,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -486,17 +499,18 @@
       <workItem from="1499627370486" duration="16045000" />
       <workItem from="1499978860864" duration="714000" />
       <workItem from="1500298790365" duration="22000" />
-      <workItem from="1500344597613" duration="5926000" />
+      <workItem from="1500344597613" duration="6361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77841000" />
+    <option name="totallyTimeSpent" value="78276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14446793" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14446793" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="GraphQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15662651" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -994,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RockRouteList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1015,10 +1019,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RockRouteList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RockRouteDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="605">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="109" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

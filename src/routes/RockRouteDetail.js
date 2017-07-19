@@ -37,11 +37,11 @@ class RockRouteDetail extends Component {
     if (rockRoute.comments) {
       commentsToDisplay = rockRoute.comments.map ((comment) => {
         return (
-          <Media>
+          <Media key={comment.id}>
             <Media left href="#">
-              <Media object data-src="shitThumb.jpg/40x40" alt="Generic placeholder image" />
+              {/*<Media object data-src="../resources/shitThumb.gif/40x40" alt="Generic placeholder image" />*/}
             </Media>
-            <Media body key={comment.id}>
+            <Media body>
               <Media heading>i am a comment</Media>
               {comment.comment}
             </Media>
