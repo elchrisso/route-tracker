@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import backendClient from '../client'
+import client from '../client'
 
-export const reducer = combineReducers({
-  apollo: backendClient.reducer()
+export default combineReducers({
+  apollo: client.reducer()
 })

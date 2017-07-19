@@ -8,10 +8,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { BrowserRouter }  from 'react-router-dom'
 import { ApolloProvider } from 'react-apollo'
-import apiClient from './client'
+import client from './client'
+import store from './store'
 
 ReactDOM.render(
-  <ApolloProvider client={apiClient}>
+  <ApolloProvider store={store} client={client}>
     <BrowserRouter>
       <App/>
     </BrowserRouter>
