@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
 
 import { Route, Switch } from 'react-router-dom'
 
-import RockRouteList from './routes/RockRouteList'
-import RockRouteAdd from './routes/RouteAdd'
-import RockRouteEdit from './routes/RockRouteEdit'
-import RockRouteDetail from './routes/RockRouteDetail'
+import RockRouteList from '../routes/RockRouteList'
+import RockRouteAdd from '../routes/RouteAdd'
+import RockRouteEdit from '../routes/RockRouteEdit'
+import RockRouteDetail from '../routes/RockRouteDetail'
 import { Jumbotron } from 'reactstrap'
 
 

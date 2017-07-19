@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 
-import backendClient from './backendClient'
+import backendClient from './client'
 import { reducer } from './app/reducer'
 
 export default createStore(reducer, {}, compose(

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Jumbotron, Input, Button, FormGroup, Form } from 'reactstrap'
+import { Jumbotron, Input, Button, FormGroup, Form, Media } from 'reactstrap'
 import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 
@@ -37,9 +37,15 @@ class RockRouteDetail extends Component {
     if (rockRoute.comments) {
       commentsToDisplay = rockRoute.comments.map ((comment) => {
         return (
-          <p key={comment.id}>
-            {comment.comment}
-          </p>
+          <Media>
+            <Media left href="#">
+              <Media object data-src="shitThumb.jpg/40x40" alt="Generic placeholder image" />
+            </Media>
+            <Media body key={comment.id}>
+              <Media heading>i am a comment</Media>
+              {comment.comment}
+            </Media>
+          </Media>
         )
       })
     }
