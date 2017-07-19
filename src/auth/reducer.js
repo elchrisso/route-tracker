@@ -6,7 +6,7 @@ export const initialState = {
   signedUp: false,
   signingUp: false,
   signupError: null,
-  token: (token) ? token : null,
+  //token: (token) ? token : null,
   userInfo: null
 }
 
