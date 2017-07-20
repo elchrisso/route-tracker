@@ -39,7 +39,7 @@ class Login extends Component {
     }
 
     return (
-      <Container classname="login-container">
+      <Container className="login-container">
         <Row>
           <Col>
             <Card>

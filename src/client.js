@@ -4,8 +4,22 @@ const networkInterface = createNetworkInterface({
   uri: 'https://api.graph.cool/simple/v1/cj4bftimcf1w60142urmo7pbn'
 })
 
-const client = new ApolloClient({
+networkInterface.use([
+  {
+    applyMiddleware (req, next) {
+      if (!req.options.headers) {
+        req.options.headers = {}
+      }
+
+      const token = localStorage.getItem('token')
+
+      req.options.headers.authorization = (token) ? `Bearer $(token}` : null
+
+      next()
+    }
+  }
+])
+
+export default new ApolloClient({
   networkInterface
 })
-
-export default client

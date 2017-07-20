@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa380a9-e46e-49cc-92ee-198ea11837c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/auth/Login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/auth/LoginForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/App.js" afterPath="$PROJECT_DIR$/src/app/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth/reducer.js" afterPath="$PROJECT_DIR$/src/auth/reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth/service.js" afterPath="$PROJECT_DIR$/src/auth/service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth/Login.js" afterPath="$PROJECT_DIR$/src/auth/Login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client.js" afterPath="$PROJECT_DIR$/src/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graphql/routes.graph.js" afterPath="$PROJECT_DIR$/src/graphql/routes.graph.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,96 +20,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/auth/service.js">
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <marker date="1500486570000" expanded="true" signature="79:241" ph="mutation...{&#10;      signinUser(email: {&#10;        email: $email&#10;        password: $password&#10;      }) {&#10;        token&#10;      }&#10;    }" />
-                <marker date="1500486570000" expanded="true" signature="87:124" ph="(...)" />
-                <marker date="1500486570000" expanded="true" signature="96:102" ph="String...String" />
-                <marker date="1500486570000" expanded="true" signature="116:122" ph="String...String" />
-                <marker date="1500486570000" expanded="true" signature="125:241" ph="{...}" />
-                <marker date="1500486570000" expanded="true" signature="133:143" ph="signinUser...signinUser" />
-                <marker date="1500486570000" expanded="true" signature="133:235" ph="signinUser...{&#10;        token&#10;      }" />
-                <marker date="1500486570000" expanded="true" signature="143:211" ph="(...)" />
-                <marker date="1500486570000" expanded="true" signature="144:149" ph="email...email" />
-                <marker date="1500486570000" expanded="true" signature="144:210" ph="email...{&#10;        email: $email&#10;        password: $password&#10;      }" />
-                <marker date="1500486570000" expanded="true" signature="151:210" ph="{...}" />
-                <marker date="1500486570000" expanded="true" signature="161:166" ph="email...email" />
-                <marker date="1500486570000" expanded="true" signature="183:191" ph="password...password" />
-                <marker date="1500486570000" expanded="true" signature="212:235" ph="{...}" />
-                <marker date="1500486570000" expanded="true" signature="222:227" ph="token...token" />
-                <marker date="1500486570000" expanded="true" signature="276:378" ph="query...{&#10;      user {&#10;        id&#10;        email&#10;        profile {&#10;          name&#10;        }&#10;      }&#10;    }" />
-                <marker date="1500486570000" expanded="true" signature="282:378" ph="{...}" />
-                <marker date="1500486570000" expanded="true" signature="290:294" ph="user...user" />
-                <marker date="1500486570000" expanded="true" signature="290:372" ph="user...{&#10;        id&#10;        email&#10;        profile {&#10;          name&#10;        }&#10;      }" />
-                <marker date="1500486570000" expanded="true" signature="295:372" ph="{...}" />
-                <marker date="1500486570000" expanded="true" signature="305:307" ph="id...id" />
-                <marker date="1500486570000" expanded="true" signature="316:321" ph="email...email" />
-                <marker date="1500486570000" expanded="true" signature="330:337" ph="profile...profile" />
-                <marker date="1500486570000" expanded="true" signature="330:364" ph="profile...{&#10;          name&#10;        }" />
-                <marker date="1500486570000" expanded="true" signature="338:364" ph="{...}" />
-                <marker date="1500486570000" expanded="true" signature="350:354" ph="name...name" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-              <folding>
-                <element signature="e#65#113#0" expanded="true" />
-                <marker date="1500485984000" expanded="true" signature="802:1059" ph="&lt;Switch/&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/auth/reducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="360">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/auth/Login.js">
+      <file leaf-file-name="AppHeader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/header/AppHeader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="28" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/auth/LoginForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/auth/Login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +76,6 @@
         <option value="$PROJECT_DIR$/src/routes/RouteAdd.js" />
         <option value="$PROJECT_DIR$/src/routes/RockRouteList.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/graphql/routes.graph.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/routes/RockRouteDetail.js" />
         <option value="$PROJECT_DIR$/src/store.js" />
@@ -160,11 +83,14 @@
         <option value="$PROJECT_DIR$/src/auth/actions.js" />
         <option value="$PROJECT_DIR$/src/app/reducer.js" />
         <option value="$PROJECT_DIR$/src/auth/Login.css" />
-        <option value="$PROJECT_DIR$/src/app/App.js" />
         <option value="$PROJECT_DIR$/src/auth/reducer.js" />
         <option value="$PROJECT_DIR$/src/auth/service.js" />
         <option value="$PROJECT_DIR$/src/auth/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/auth/Login.js" />
+        <option value="$PROJECT_DIR$/src/app/App.js" />
+        <option value="$PROJECT_DIR$/src/header/AppHeader.js" />
+        <option value="$PROJECT_DIR$/src/graphql/routes.graph.js" />
+        <option value="$PROJECT_DIR$/src/client.js" />
       </list>
     </option>
   </component>
@@ -251,6 +177,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="route-tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="route-tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="header" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,12 +387,12 @@
       <workItem from="1499627370486" duration="16045000" />
       <workItem from="1499978860864" duration="714000" />
       <workItem from="1500298790365" duration="22000" />
-      <workItem from="1500344597613" duration="13991000" />
+      <workItem from="1500344597613" duration="16824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85906000" />
+    <option name="totallyTimeSpent" value="88739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="722" y="0" width="718" height="900" extended-state="0" />
@@ -487,13 +431,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RockRouteList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -570,8 +507,7 @@
         <state relative-caret-position="450">
           <caret line="28" column="64" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
           <folding>
-            <element signature="e#65#113#0" expanded="true" />
-            <marker date="1500485984000" expanded="true" signature="802:1059" ph="&lt;Switch/&gt;" />
+            <marker date="1500498357000" expanded="true" signature="638:895" ph="&lt;Switch/&gt;" />
           </folding>
         </state>
       </provider>
@@ -615,8 +551,7 @@
         <state relative-caret-position="135">
           <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="23" />
           <folding>
-            <element signature="e#65#113#0" expanded="true" />
-            <marker date="1500485984000" expanded="true" signature="802:1059" ph="&lt;Switch/&gt;" />
+            <marker date="1500498357000" expanded="true" signature="638:895" ph="&lt;Switch/&gt;" />
           </folding>
         </state>
       </provider>
@@ -633,8 +568,7 @@
         <state relative-caret-position="180">
           <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
-            <element signature="e#65#113#0" expanded="true" />
-            <marker date="1500485984000" expanded="true" signature="802:1059" ph="&lt;Switch/&gt;" />
+            <marker date="1500498357000" expanded="true" signature="638:895" ph="&lt;Switch/&gt;" />
           </folding>
         </state>
       </provider>
@@ -717,14 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RockRouteEdit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="745">
@@ -749,111 +675,6 @@
           <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphql/routes.graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <marker date="1500381039000" expanded="true" signature="73:155" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="79:88" ph="allRoutes...allRoutes" />
-            <marker date="1500381039000" expanded="true" signature="79:151" ph="allRoutes...{&#10;      id&#10;      name&#10;      sent&#10;      style&#10;      grade&#10;    }" />
-            <marker date="1500381039000" expanded="true" signature="89:151" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="97:99" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="106:110" ph="name...name" />
-            <marker date="1500381039000" expanded="true" signature="117:121" ph="sent...sent" />
-            <marker date="1500381039000" expanded="true" signature="128:133" ph="style...style" />
-            <marker date="1500381039000" expanded="true" signature="140:145" ph="grade...grade" />
-            <marker date="1500381039000" expanded="true" signature="196:359" ph="query...{&#10;    Route(id: $id) {&#10;      id&#10;      name&#10;      grade&#10;      style&#10;      description&#10;    }&#10;  }" />
-            <marker date="1500381039000" expanded="true" signature="202:212" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="208:210" ph="ID...ID" />
-            <marker date="1500381039000" expanded="true" signature="213:359" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="219:224" ph="Route...Route" />
-            <marker date="1500381039000" expanded="true" signature="219:355" ph="Route...{&#10;      id&#10;      name&#10;      grade&#10;      style&#10;      description&#10;    }" />
-            <marker date="1500381039000" expanded="true" signature="224:233" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="225:227" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="234:355" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="242:244" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="251:255" ph="name...name" />
-            <marker date="1500381039000" expanded="true" signature="262:267" ph="grade...grade" />
-            <marker date="1500381039000" expanded="true" signature="274:279" ph="style...style" />
-            <marker date="1500381039000" expanded="true" signature="286:297" ph="description...description" />
-            <marker date="1500381039000" expanded="true" signature="304:312" ph="comments...comments" />
-            <marker date="1500381039000" expanded="true" signature="304:349" ph="comments...{&#10;        id&#10;        comment&#10;      }" />
-            <marker date="1500381039000" expanded="true" signature="313:349" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="323:325" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="334:341" ph="comment...comment" />
-            <marker date="1500381039000" expanded="true" signature="394:637" ph="mutation...{&#10;    createRoute(&#10;        name: $name,&#10;        style: $style,&#10;        grade: $grade,&#10;        description: $description&#10;    )&#10;    {&#10;      id&#10;      name&#10;    }&#10;  }" />
-            <marker date="1500381039000" expanded="true" signature="403:475" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="411:417" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="428:434" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="445:451" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="468:474" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="476:637" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="482:493" ph="createRoute...createRoute" />
-            <marker date="1500381039000" expanded="true" signature="482:633" ph="createRoute...{&#10;      id&#10;      name&#10;    }" />
-            <marker date="1500381039000" expanded="true" signature="493:601" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="503:507" ph="name...name" />
-            <marker date="1500381039000" expanded="true" signature="524:529" ph="style...style" />
-            <marker date="1500381039000" expanded="true" signature="547:552" ph="grade...grade" />
-            <marker date="1500381039000" expanded="true" signature="570:581" ph="description...description" />
-            <marker date="1500381039000" expanded="true" signature="606:633" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="614:616" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="623:627" ph="name...name" />
-            <marker date="1500381039000" expanded="true" signature="677:835" ph="mutation...{&#10;    updateRoute(id: $id, description: $description, style: $style) {&#10;      id&#10;      name&#10;    }&#10;  }" />
-            <marker date="1500381039000" expanded="true" signature="686:734" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="692:694" ph="ID...ID" />
-            <marker date="1500381039000" expanded="true" signature="711:717" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="727:733" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="735:835" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="741:752" ph="updateRoute...updateRoute" />
-            <marker date="1500381039000" expanded="true" signature="741:831" ph="updateRoute...{&#10;      id&#10;      name&#10;    }" />
-            <marker date="1500381039000" expanded="true" signature="752:803" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="753:755" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="762:773" ph="description...description" />
-            <marker date="1500381039000" expanded="true" signature="789:794" ph="style...style" />
-            <marker date="1500381039000" expanded="true" signature="804:831" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="812:814" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="821:825" ph="name...name" />
-            <marker date="1500381039000" expanded="true" signature="873:941" ph="mutation...{&#10;  deleteRoute(id: $id) {&#10;    id&#10;    name&#10;  }&#10;}" />
-            <marker date="1500381039000" expanded="true" signature="882:892" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="888:890" ph="ID...ID" />
-            <marker date="1500381039000" expanded="true" signature="893:941" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="897:908" ph="deleteRoute...deleteRoute" />
-            <marker date="1500381039000" expanded="true" signature="897:939" ph="deleteRoute...{&#10;    id&#10;    name&#10;  }" />
-            <marker date="1500381039000" expanded="true" signature="908:917" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="909:911" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="918:939" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="924:926" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="931:935" ph="name...name" />
-            <marker date="1500381039000" expanded="true" signature="977:1072" ph="mutation...{&#10;    updateRoute(id: $id, sent: true) {&#10;      id&#10;    }&#10;  }" />
-            <marker date="1500381039000" expanded="true" signature="986:1012" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="992:994" ph="ID...ID" />
-            <marker date="1500381039000" expanded="true" signature="1004:1011" ph="Boolean...Boolean" />
-            <marker date="1500381039000" expanded="true" signature="1013:1072" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="1019:1030" ph="updateRoute...updateRoute" />
-            <marker date="1500381039000" expanded="true" signature="1019:1068" ph="updateRoute...{&#10;      id&#10;    }" />
-            <marker date="1500381039000" expanded="true" signature="1030:1051" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="1031:1033" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="1040:1044" ph="sent...sent" />
-            <marker date="1500381039000" expanded="true" signature="1052:1068" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="1060:1062" ph="id...id" />
-            <marker date="1500381039000" expanded="true" signature="1109:1232" ph="mutation...{&#10;    createComment (comment: $c)&#10;  }" />
-            <marker date="1500381039000" expanded="true" signature="1118:1139" ph="(...$" />
-            <marker date="1500381039000" expanded="true" signature="1118:1152" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="1129:1135" ph="String...String" />
-            <marker date="1500381039000" expanded="true" signature="1148:1150" ph="ID...ID" />
-            <marker date="1500381039000" expanded="true" signature="1153:1232" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="1159:1172" ph="createComment...createComment" />
-            <marker date="1500381039000" expanded="true" signature="1159:1228" ph="createComment...{&#10;      id&#10;    }" />
-            <marker date="1500381039000" expanded="true" signature="1173:1211" ph="(...)" />
-            <marker date="1500381039000" expanded="true" signature="1174:1181" ph="comment...comment" />
-            <marker date="1500381039000" expanded="true" signature="1193:1200" ph="routeId...routeId" />
-            <marker date="1500381039000" expanded="true" signature="1212:1228" ph="{...}" />
-            <marker date="1500381039000" expanded="true" signature="1220:1222" ph="id...id" />
           </folding>
         </state>
       </provider>
@@ -922,13 +743,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/App.js">
+    <entry file="file://$PROJECT_DIR$/src/auth/LoginForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
-            <element signature="e#65#113#0" expanded="true" />
-            <marker date="1500485984000" expanded="true" signature="802:1059" ph="&lt;Switch/&gt;" />
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -943,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auth/service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
           <folding>
             <marker date="1500486570000" expanded="true" signature="79:241" ph="mutation...{&#10;      signinUser(email: {&#10;        email: $email&#10;        password: $password&#10;      }) {&#10;        token&#10;      }&#10;    }" />
             <marker date="1500486570000" expanded="true" signature="87:124" ph="(...)" />
@@ -976,23 +806,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth/LoginForm.js">
+    <entry file="file://$PROJECT_DIR$/src/graphql/routes.graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="775">
+          <caret line="97" column="3" lean-forward="false" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
+          <folding>
+            <marker date="1500514226000" expanded="true" signature="73:155" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="79:88" ph="allRoutes...allRoutes" />
+            <marker date="1500514226000" expanded="true" signature="79:151" ph="allRoutes...{&#10;      id&#10;      name&#10;      sent&#10;      style&#10;      grade&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="89:151" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="97:99" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="106:110" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="117:121" ph="sent...sent" />
+            <marker date="1500514226000" expanded="true" signature="128:133" ph="style...style" />
+            <marker date="1500514226000" expanded="true" signature="140:145" ph="grade...grade" />
+            <marker date="1500514226000" expanded="true" signature="196:359" ph="query...{&#10;    Route(id: $id) {&#10;      id&#10;      name&#10;      grade&#10;      style&#10;      description&#10;    }&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="202:212" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="208:210" ph="ID...ID" />
+            <marker date="1500514226000" expanded="true" signature="213:359" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="219:224" ph="Route...Route" />
+            <marker date="1500514226000" expanded="true" signature="219:355" ph="Route...{&#10;      id&#10;      name&#10;      grade&#10;      style&#10;      description&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="224:233" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="225:227" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="234:355" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="242:244" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="251:255" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="262:267" ph="grade...grade" />
+            <marker date="1500514226000" expanded="true" signature="274:279" ph="style...style" />
+            <marker date="1500514226000" expanded="true" signature="286:297" ph="description...description" />
+            <marker date="1500514226000" expanded="true" signature="304:312" ph="comments...comments" />
+            <marker date="1500514226000" expanded="true" signature="304:349" ph="comments...{&#10;        id&#10;        comment&#10;      }" />
+            <marker date="1500514226000" expanded="true" signature="313:349" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="323:325" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="334:341" ph="comment...comment" />
+            <marker date="1500514226000" expanded="true" signature="394:637" ph="mutation...{&#10;    createRoute(&#10;        name: $name,&#10;        style: $style,&#10;        grade: $grade,&#10;        description: $description&#10;    )&#10;    {&#10;      id&#10;      name&#10;    }&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="403:475" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="411:417" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="428:434" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="445:451" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="468:474" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="476:637" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="482:493" ph="createRoute...createRoute" />
+            <marker date="1500514226000" expanded="true" signature="482:633" ph="createRoute...{&#10;      id&#10;      name&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="493:601" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="503:507" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="524:529" ph="style...style" />
+            <marker date="1500514226000" expanded="true" signature="547:552" ph="grade...grade" />
+            <marker date="1500514226000" expanded="true" signature="570:581" ph="description...description" />
+            <marker date="1500514226000" expanded="true" signature="606:633" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="614:616" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="623:627" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="677:835" ph="mutation...{&#10;    updateRoute(id: $id, description: $description, style: $style) {&#10;      id&#10;      name&#10;    }&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="686:734" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="692:694" ph="ID...ID" />
+            <marker date="1500514226000" expanded="true" signature="711:717" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="727:733" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="735:835" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="741:752" ph="updateRoute...updateRoute" />
+            <marker date="1500514226000" expanded="true" signature="741:831" ph="updateRoute...{&#10;      id&#10;      name&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="752:803" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="753:755" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="762:773" ph="description...description" />
+            <marker date="1500514226000" expanded="true" signature="789:794" ph="style...style" />
+            <marker date="1500514226000" expanded="true" signature="804:831" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="812:814" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="821:825" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="873:941" ph="mutation...{&#10;  deleteRoute(id: $id) {&#10;    id&#10;    name&#10;  }&#10;}" />
+            <marker date="1500514226000" expanded="true" signature="882:892" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="888:890" ph="ID...ID" />
+            <marker date="1500514226000" expanded="true" signature="893:941" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="897:908" ph="deleteRoute...deleteRoute" />
+            <marker date="1500514226000" expanded="true" signature="897:939" ph="deleteRoute...{&#10;    id&#10;    name&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="908:917" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="909:911" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="918:939" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="924:926" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="931:935" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="977:1072" ph="mutation...{&#10;    updateRoute(id: $id, sent: true) {&#10;      id&#10;    }&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="986:1012" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="992:994" ph="ID...ID" />
+            <marker date="1500514226000" expanded="true" signature="1004:1011" ph="Boolean...Boolean" />
+            <marker date="1500514226000" expanded="true" signature="1013:1072" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1019:1030" ph="updateRoute...updateRoute" />
+            <marker date="1500514226000" expanded="true" signature="1019:1068" ph="updateRoute...{&#10;      id&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="1030:1051" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="1031:1033" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="1040:1044" ph="sent...sent" />
+            <marker date="1500514226000" expanded="true" signature="1052:1068" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1060:1062" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="1109:1232" ph="mutation...{&#10;    createComment (comment: $c)&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="1118:1139" ph="(...$" />
+            <marker date="1500514226000" expanded="true" signature="1118:1152" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="1129:1135" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="1148:1150" ph="ID...ID" />
+            <marker date="1500514226000" expanded="true" signature="1153:1232" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1159:1172" ph="createComment...createComment" />
+            <marker date="1500514226000" expanded="true" signature="1159:1228" ph="createComment...{&#10;      id&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="1173:1211" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="1174:1181" ph="comment...comment" />
+            <marker date="1500514226000" expanded="true" signature="1193:1200" ph="routeId...routeId" />
+            <marker date="1500514226000" expanded="true" signature="1212:1228" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1220:1222" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="1266:1566" ph="mutation...{&#10;    createUser(&#10;      profile: {&#10;        name: $name&#10;      }&#10;      authProvider: {&#10;        email: {&#10;          email: $email&#10;          password: $password&#10;        }&#10;      }&#10;    ) {&#10;      id&#10;      profile {&#10;        name&#10;      }&#10;    }&#10;  }" />
+            <marker date="1500514226000" expanded="true" signature="1275:1328" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="1283:1289" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="1300:1306" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="1320:1326" ph="String...String" />
+            <marker date="1500514226000" expanded="true" signature="1329:1566" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1335:1345" ph="createUser...createUser" />
+            <marker date="1500514226000" expanded="true" signature="1335:1562" ph="createUser...{&#10;      id&#10;      profile {&#10;        name&#10;      }&#10;    }" />
+            <marker date="1500514226000" expanded="true" signature="1345:1508" ph="(...)" />
+            <marker date="1500514226000" expanded="true" signature="1353:1360" ph="profile...profile" />
+            <marker date="1500514226000" expanded="true" signature="1353:1391" ph="profile...{&#10;        name: $name&#10;      }" />
+            <marker date="1500514226000" expanded="true" signature="1362:1391" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1372:1376" ph="name...name" />
+            <marker date="1500514226000" expanded="true" signature="1398:1410" ph="authProvider...authProvider" />
+            <marker date="1500514226000" expanded="true" signature="1398:1502" ph="authProvider...{&#10;        email: {&#10;          email: $email&#10;          password: $password&#10;        }&#10;      }" />
+            <marker date="1500514226000" expanded="true" signature="1412:1502" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1422:1427" ph="email...email" />
+            <marker date="1500514226000" expanded="true" signature="1422:1494" ph="email...{&#10;          email: $email&#10;          password: $password&#10;        }" />
+            <marker date="1500514226000" expanded="true" signature="1429:1494" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1441:1446" ph="email...email" />
+            <marker date="1500514226000" expanded="true" signature="1465:1473" ph="password...password" />
+            <marker date="1500514226000" expanded="true" signature="1509:1562" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1517:1519" ph="id...id" />
+            <marker date="1500514226000" expanded="true" signature="1526:1533" ph="profile...profile" />
+            <marker date="1500514226000" expanded="true" signature="1526:1556" ph="profile...{&#10;        name&#10;      }" />
+            <marker date="1500514226000" expanded="true" signature="1534:1556" ph="{...}" />
+            <marker date="1500514226000" expanded="true" signature="1544:1548" ph="name...name" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <marker date="1500498357000" expanded="true" signature="638:895" ph="&lt;Switch/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/header/AppHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth/Login.js">
+    <entry file="file://$PROJECT_DIR$/src/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
