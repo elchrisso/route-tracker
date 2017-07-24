@@ -30,9 +30,6 @@ class RockRouteList extends Component {
   }
 
   render () {
-    function loadRockRoute () {
-      console.log("i am your loadRockRoute function, but all i do right now is log to console.")
-    }
 
     let routes = null
     if (this.props.data.allRoutes) {

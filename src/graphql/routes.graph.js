@@ -97,3 +97,17 @@ export const addUser = gql`
     }
   }
 `
+
+export const fetchLoggedInUser = gql`
+  query {
+    user {
+      id
+      email
+      
+      profile {
+        id
+        name
+      }
+    }
+  }
+`

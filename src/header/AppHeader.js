@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap'
+import { Navbar, NavbarBrand, Nav, } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class AppHeader extends Component {
   render () {
@@ -7,6 +8,7 @@ class AppHeader extends Component {
       <div>
         <Navbar color="faded">
           <NavbarBrand>route tracker</NavbarBrand>
+          <NavLink to="/addrockroute">Add a Route</NavLink>
         </Navbar>
       </div>
     )

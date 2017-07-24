@@ -1,13 +1,16 @@
 import { actionTypes } from './actions'
 
+const token = localStorage.getItem('token')
+
 export const initialState = {
   error: null,
-  loggingIn: false,
+  loading: false,
   signedUp: false,
   signingUp: false,
   signupError: null,
-  //token: (token) ? token : null,
-  userInfo: null
+  token: (token) ? token : null,
+  userInfo: null,
+  userInfoError: null
 }
 
 export function reducer (state = initialState, action) {
@@ -15,7 +18,7 @@ export function reducer (state = initialState, action) {
     case actionTypes.LOGIN:
       return {
         ...initialState,
-        loggingIn: true
+        loading: true
       }
 
     case actionTypes.LOGIN_SUCCESS:
@@ -29,6 +32,26 @@ export function reducer (state = initialState, action) {
       return {
         ...initialState,
         error: action.payload
+      }
+
+    case actionTypes.GET_AUTH_USER:
+      return {
+        ...initialState,
+        loading: true
+      }
+
+    case actionTypes.GET_AUTH_USER_SUCCESS:
+      return {
+        ...initialState,
+        loading: false,
+        userInfo: action.payload
+      }
+
+    case actionTypes.GET_AUTH_USER_FAIL:
+      return {
+        ...initialState,
+        loading: false,
+        userInfoError: action.payload
       }
 
     default:

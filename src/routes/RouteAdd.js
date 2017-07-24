@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { graphql } from 'react-apollo'
 import { Row, Col, Button } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 import { fetchAllRoutes, addRoute } from '../graphql/routes.graph'
 
