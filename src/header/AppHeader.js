@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import AuthSerice from '../auth/service'
-import { getAuthUser, getAuthUserSuccess, getAuthUserFail } from '../auth/actions'
+import { getAuthUser, getAuthUserSuccess, getAuthUserFail, logout } from '../auth/actions'
 
 class AppHeader extends Component {
 
@@ -19,6 +19,10 @@ class AppHeader extends Component {
       console.error(err)
       this.props.dispatch(getAuthUserFail(err.message))
     })
+  }
+
+  handleLogout = () => {
+    this.props.dispatch(logout())
   }
 
   render () {
@@ -39,7 +43,7 @@ class AppHeader extends Component {
             <NavLink to={userLink}>{userLinkText}</NavLink>
           </NavItem>
           <NavItem>
-            <Button color="link" size="sm">Log Out</Button>
+            <Button color="link" size="sm" onClick={this.handleLogout}>Log Out</Button>
           </NavItem>
         </Nav>
       </Navbar>
