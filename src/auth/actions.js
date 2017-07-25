@@ -3,6 +3,8 @@ export const actionTypes = {
   LOGIN_SUCCESS: '[Auth] Login Success',
   LOGIN_ERROR: '[Auth] Login Error',
 
+  LOGOUT: '[Auth] Logout',
+
   GET_AUTH_USER: '[Auth] Get Auth User',
   GET_AUTH_USER_SUCCESS: '[Auth] Get Auth User Success',
   GET_AUTH_USER_FAIL: '[Auth] Get AuthUser Fail'
@@ -14,10 +16,10 @@ export function login () {
   }
 }
 
-export function loginSuccess (signinUserData) {
+export function loginSuccess (token) {
   return {
     type: actionTypes.LOGIN_SUCCESS,
-    payload: signinUserData
+    payload: token
   }
 }
 
@@ -28,8 +30,17 @@ export function loginError (message) {
   }
 }
 
+export function logout () {
+  return {
+    type: actionTypes.LOGOUT
+  }
+}
+
+
 export function getAuthUser () {
-  type: actionTypes.GET_AUTH_USER
+  return {
+    type: actionTypes.GET_AUTH_USER
+  }
 }
 
 export function getAuthUserSuccess (profile) {

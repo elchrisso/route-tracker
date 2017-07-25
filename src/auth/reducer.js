@@ -22,10 +22,10 @@ export function reducer (state = initialState, action) {
       }
 
     case actionTypes.LOGIN_SUCCESS:
-      localStorage.setItem('token', action.payload.token)
+      localStorage.setItem('token', action.payload)
       return {
         ...initialState,
-        token: action.payload.token
+        token: action.payload
       }
 
     case actionTypes.LOGIN_ERROR:
@@ -33,6 +33,11 @@ export function reducer (state = initialState, action) {
         ...initialState,
         error: action.payload
       }
+
+    case actionTypes.LOGOUT:
+      localStorage.removeItem('token')
+      window.location.reload()
+      return initialState
 
     case actionTypes.GET_AUTH_USER:
       return {

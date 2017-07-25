@@ -17,7 +17,7 @@ class Login extends Component {
     this.props.mutate({
       variables: data
     }).then((response) => {
-      this.props.dispatch(loginSuccess(response.data.signinUser))
+      this.props.dispatch(loginSuccess(response.data.signinUser.token))
     }).catch((error) => {
       this.props.dispatch(loginError(error.message))
     })
@@ -47,7 +47,7 @@ class Login extends Component {
               <CardBlock>
                 {justSignedUp}
                 {errorMessage}
-                <LoginForm loading={this.props.loggingIn} onSubmit={this.handleLoginAttempt}/>
+                <LoginForm loading={false} onSubmit={this.handleLoginAttempt}/>
               </CardBlock>
             </Card>
           </Col>
@@ -57,12 +57,12 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
-  error: PropTypes.string,
-  loggingIn: PropTypes.bool.isRequired,
-  signedUp: PropTypes.bool.isRequired,
-  token: PropTypes.string
-}
+// Login.propTypes = {
+//   error: PropTypes.string,
+//   loggingIn: PropTypes.bool.isRequired,
+//   signedUp: PropTypes.bool.isRequired,
+//   token: PropTypes.string
+// }
 
 const mapStateToProps = (state) => {
   return {
