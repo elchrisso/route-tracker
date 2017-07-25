@@ -1,0 +1,9 @@
+.nav-link.active {
+  background-color: darkblue;
+  color: white;
+}
+
+.appHeader {
+  width: 50%;
+  background-color: darkslateblue;
+}

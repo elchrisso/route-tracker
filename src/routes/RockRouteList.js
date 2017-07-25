@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { graphql } from 'react-apollo'
 import { Table, Button } from 'reactstrap'
+import '../app/App.css'
 import { Link } from 'react-router-dom'
 
 import { fetchAllRoutes, removeRoute, sendRoute } from '../graphql/routes.graph'
@@ -73,7 +74,6 @@ class RockRouteList extends Component {
           {routes}
           </tbody>
         </Table>
-        <Link to="addRockRoute">Add A Route</Link>
 
       </div>
     )

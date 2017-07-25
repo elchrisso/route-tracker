@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, NavbarBrand, Nav, NavItem, Button } from 'reactstrap'
+import './appHeader.css'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
@@ -33,17 +34,17 @@ class AppHeader extends Component {
       userLinkText = this.props.userInfo.profile.name + "'s Account"
     }
     return (
-      <Navbar color="faded" light toggleable>
+      <Navbar color="faded" fixed-top light toggleable>
         <NavbarBrand href="/">route tracker</NavbarBrand>
-        <Nav className=""ml-auto>
+        <Nav className="ml-auto">
           <NavItem>
-            <NavLink to="/addrockroute">Add a Route</NavLink>
+            <NavLink className="nav-link" to="/addrockroute">Add a Route</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={userLink}>{userLinkText}</NavLink>
+            <NavLink className="nav-link" to={userLink}>{userLinkText}</NavLink>
           </NavItem>
           <NavItem>
-            <Button color="link" size="sm" onClick={this.handleLogout}>Log Out</Button>
+            <Button color="link"  onClick={this.handleLogout}>Log Out</Button>
           </NavItem>
         </Nav>
       </Navbar>

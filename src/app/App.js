@@ -17,15 +17,17 @@ import Auth from '../auth/Auth'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <AppHeader/>
-        <Switch>
-          <Route exact path="/login" component={Login}/>
-          <Route exact path="/" component={Auth}/>
-          <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
-          <Route exact path="/addrockroute" component={RockRouteAdd}/>
-          <Route exact path="/rockroutedetail/:id/edit" component={RockRouteEdit}/>
-        </Switch>
+      <div>
+        <AppHeader className="appHeader"/>
+        <div className="App">
+          <Switch>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/" component={RockRouteList}/>
+            <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
+            <Route exact path="/addrockroute" component={RockRouteAdd}/>
+            <Route exact path="/rockroutedetail/:id/edit" component={RockRouteEdit}/>
+          </Switch>
+        </div>
       </div>
     );
   }

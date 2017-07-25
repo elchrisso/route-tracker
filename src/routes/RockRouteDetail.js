@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Jumbotron, Input, Button, FormGroup, Form, Media } from 'reactstrap'
+import { Jumbotron, Input, Button, FormGroup, Form, Media, Row } from 'reactstrap'
 import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 
@@ -56,23 +56,26 @@ class RockRouteDetail extends Component {
           <h6>Route Details</h6>
           <h3>{rockRoute.name}</h3><h4>{rockRoute.grade} - {rockRoute.style}</h4>
           <p>{rockRoute.description}</p>
+          <div>
+            <Link to={`/rockroutedetail/${rockRoute.id}/edit`}>Edit {rockRoute.name}</Link>
+          </div>
         </Jumbotron>
-        <div><Link to={`/rockroutedetail/${rockRoute.id}/edit`}>Edit {rockRoute.name}</Link>
-        </div>
-        <div>
-          <Link to="/">Home</Link>
-        </div>
 
-        <div>
-          {commentsToDisplay}
-        </div>
-
-        <Form onSubmit={this.addComment}>
-          <FormGroup>
-            <Input type="text" placeholder="comments?  starting point for a flame war?" onChange={(evt) => this.setState({ comment: evt.target.value })}></Input>
-            <Button type="submit" color="success">Add This Comment!</Button>
-          </FormGroup>
-        </Form>
+        <Row>
+          <div className="col-6">
+            <div>
+              {commentsToDisplay}
+            </div>
+          </div>
+          <div className="col-6">
+            <Form onSubmit={this.addComment}>
+              <FormGroup>
+                <Input type="textarea" placeholder="comments?  starting point for a flame war?" onChange={(evt) => this.setState({ comment: evt.target.value })}></Input>
+                <Button type="submit" color="success">Add This Comment!</Button>
+              </FormGroup>
+            </Form>
+          </div>
+        </Row>
       </div>
     )
   }
