@@ -2,9 +2,24 @@ import React, { Component } from 'react'
 import { Button, Row, Col, Input, Label, FormGroup } from 'reactstrap'
 import { graphql } from 'react-apollo'
 
-import { fetchRouteById, editRockRoute, fetchAllRoutes } from '../graphql/routes.graph'
+import { fetchRouteById, editRockRoute } from '../graphql/routes.graph'
+import AuthService from '../auth/service'
+import { getAuthUser, getAuthUserSuccess, getAuthUserFail } from '../auth/actions'
 
 class RockRouteEdit extends Component {
+
+  componentWillMount () {
+    this.props.dispatch(getAuthUser())
+
+    this.props.client.query({
+      query: AuthService.getLoggedInUser
+    }).then((resp) => {
+      this.props.dispatch(getAuthUserSuccess(resp.data.user))
+    }).catch((err) => {
+      console.error(err)
+      this.props.dispatch(getAuthUserFail(err.message))
+    })
+  }
 
   handleSubmit = (evt) => {
     evt.preventDefault()

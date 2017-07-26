@@ -4,6 +4,7 @@ import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 
 import { fetchRouteById, addComment } from '../graphql/routes.graph'
+import  CommentAdd from '../comments/CommentAdd'
 
 class RockRouteDetail extends Component {
   constructor () {
@@ -69,12 +70,13 @@ class RockRouteDetail extends Component {
             </div>
           </div>
           <div className="col-6">
-            <Form onSubmit={this.addComment}>
-              <FormGroup>
-                <Input type="textarea" placeholder="comments?  starting point for a flame war?" onChange={(evt) => this.setState({ comment: evt.target.value })}></Input>
-                <Button type="submit" color="success">Add This Comment!</Button>
-              </FormGroup>
-            </Form>
+            {/*<Form onSubmit={this.addComment}>*/}
+              {/*<FormGroup>*/}
+                {/*<Input type="textarea" placeholder="comments?  starting point for a flame war?" onChange={(evt) => this.setState({ comment: evt.target.value })}></Input>*/}
+                {/*<Button type="submit" color="success">Add This Comment!</Button>*/}
+              {/*</FormGroup>*/}
+            {/*</Form>*/}
+            <CommentAdd routeId={rockRoute.id}/>
           </div>
         </Row>
       </div>

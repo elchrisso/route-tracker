@@ -70,8 +70,8 @@ export const sendRoute = gql`
 `
 
 export const addComment = gql`
-  mutation ($comment: String!, $routeId: ID!) {
-    createComment (comment: $comment, routeId: $routeId) {
+  mutation ($comment: String!, $routeId: ID!, $userId: ID!) {
+    createComment (comment: $comment, routeId: $routeId, userId: $userId) {
       id
     }
   }

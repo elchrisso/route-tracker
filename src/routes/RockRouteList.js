@@ -34,7 +34,7 @@ class RockRouteList extends Component {
 
     let routes = null
 
-    if (this.props.data.allRoutes === null) {
+    if (this.props.data.loading) {
       return <h1>Loading routeList yo</h1>
     }
 

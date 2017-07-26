@@ -13,7 +13,7 @@ class AppHeader extends Component {
     this.props.dispatch(getAuthUser())
 
     this.props.client.query({
-      query:AuthSerice.getLoggedInUser
+      query: AuthSerice.getLoggedInUser
     }).then((resp) => {
       this.props.dispatch(getAuthUserSuccess(resp.data.user))
     }).catch((err) => {
