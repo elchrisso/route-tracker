@@ -29,7 +29,7 @@ export const fetchRouteById = gql`
 `
 
 export const addRoute = gql`
-  mutation ($name: String!, $style: String!, $grade: String!, $description: String) {
+  mutation ($name: String!, $style: String!, $grade: String!, $description: String!) {
     createRoute(
         name: $name,
         style: $style,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Row, Col, Input, Label } from 'reactstrap'
+import { Button, Row, Col, Input, Label, FormGroup } from 'reactstrap'
 import { graphql } from 'react-apollo'
 
 import { fetchRouteById, editRockRoute, fetchAllRoutes } from '../graphql/routes.graph'
@@ -14,7 +14,7 @@ class RockRouteEdit extends Component {
         ...this.state
       },
       refetchQueries: [{
-        query: fetchAllRoutes
+        query: fetchRouteById
       }]
     }).then(() => {
       alert('Rock Route Edited!')
@@ -29,9 +29,14 @@ class RockRouteEdit extends Component {
         <form onSubmit={this.handleSubmit}>
           <Row>
             <Col>
-              <Label for="newNoteText">New Note/Description Text</Label>
-              <Input type="textarea" defaultvalue={rockRoute.style} onChange={(evt) => this.setState({ style: evt.target.value })}/>
-              <Input type="textarea" defaultValue={rockRoute.description} onChange={(evt) => this.setState({ description: evt.target.value })} id="newNoteText"/>
+              <FormGroup>
+                <Label for="editStyle">Edit Style</Label>
+                <Input type="text" id="editStyle" defaultvalue={rockRoute.style} onChange={(evt) => this.setState({ style: evt.target.value })}/>
+              </FormGroup>
+              <FormGroup>
+                <Label for="editDescription">New Note/Description Text</Label>
+                <Input type="textarea" id="editDescription" defaultValue={rockRoute.description} onChange={(evt) => this.setState({ description: evt.target.value })}/>
+              </FormGroup>
             </Col>
           </Row>
           <Row>

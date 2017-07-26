@@ -16,7 +16,7 @@ class RouteAdd extends Component {
     }
   }
 
-  addRoute = (evt) => {
+  handleAddRoute = (evt) => {
     evt.preventDefault()
     this.props.mutate({
       refetchQueries: [{
@@ -26,6 +26,7 @@ class RouteAdd extends Component {
         name: this.state.name,
         style: this.state.style,
         grade: this.state.grade,
+        description: this.state.description,
         sent: this.state.sent
       }
     }).then(() => {
@@ -38,7 +39,7 @@ class RouteAdd extends Component {
   render () {
     return (
       <div>
-        <form onSubmit={this.addRoute}>
+        <form onSubmit={this.handleAddRoute}>
           <h3>Add a Route</h3>
           <Row>
             <Col>
@@ -50,12 +51,16 @@ class RouteAdd extends Component {
             <Col>
               <input type="text" placeholder="Route grade" onChange={(evt) => this.setState({ grade: evt.target.value})}/>
             </Col>
-            <Col>
+          </Row>
+          <Row>
+            <div className="col-10">
+              <input type="textarea" placeholder="Route description" onChang={(evt) => this.setState({ description: evt.target.value }) }/>
+            </div>
+            <div className="col-2">
               <Button type="submit">Add It!</Button>
-            </Col>
+            </div>
           </Row>
         </form>
-        <Link to="/">Return to Rock Route List</Link>
       </div>
 
     )

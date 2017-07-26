@@ -19,7 +19,8 @@ class RockRouteDetail extends Component {
     this.props.mutate({
       refetchQueries: [{
         query: fetchRouteById,
-        variables: { id: "cj59kyn3u5uyp0157ztd73oxp" }
+        //don't know why this is here, check in with aric...
+        //variables: { id: "cj59kyn3u5uyp0157ztd73oxp" }
       }],
       variables: {
         comment: this.state.comment,
@@ -95,7 +96,8 @@ class RockRouteDetail extends Component {
 
 const fetchedRoute = graphql(fetchRouteById, {
   options: (ownProps) => ({
-    variables: { id: ownProps.match.params.id }
+    variables: { id: ownProps.match.params.id },
+    fetchPolicy: 'network-only'
   })
 })(RockRouteDetail)
 

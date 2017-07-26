@@ -33,6 +33,11 @@ class RockRouteList extends Component {
   render () {
 
     let routes = null
+
+    if (this.props.data.allRoutes === null) {
+      return <h1>Loading routeList yo</h1>
+    }
+
     if (this.props.data.allRoutes) {
       routes = this.props.data.allRoutes.map((route) => {
         return (
