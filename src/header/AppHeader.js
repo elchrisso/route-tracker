@@ -34,7 +34,7 @@ class AppHeader extends Component {
       userLinkText = this.props.userInfo.profile.name + "'s Account"
     }
     return (
-      <Navbar color="faded" fixed-top light toggleable>
+      <Navbar color="faded" light toggleable>
         <NavbarBrand href="/">route tracker</NavbarBrand>
         <Nav className="ml-auto">
           <NavItem>

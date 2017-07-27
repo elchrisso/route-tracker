@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 
 import { fetchRouteById, addComment } from '../graphql/routes.graph'
-import  CommentAdd from '../comments/CommentAdd'
+import CommentAdd from '../comments/CommentAdd'
 
 class RockRouteDetail extends Component {
   constructor () {
@@ -12,26 +12,8 @@ class RockRouteDetail extends Component {
     this.state = {
       comment: '',
       routeId: '',
+      userId: ''
     }
-  }
-
-  addComment = (evt) => {
-    evt.preventDefault()
-    this.props.mutate({
-      refetchQueries: [{
-        query: fetchRouteById,
-        //don't know why this is here, check in with aric...
-        //variables: { id: "cj59kyn3u5uyp0157ztd73oxp" }
-      }],
-      variables: {
-        comment: this.state.comment,
-        routeId: this.props.match.params.id
-      }
-    }).then(() => {
-      alert("Comment has been added.")
-    }).catch((err) => {
-      alert(err)
-    })
   }
 
   renderRockRouteInfo (rockRoute) {
@@ -70,13 +52,7 @@ class RockRouteDetail extends Component {
             </div>
           </div>
           <div className="col-6">
-            {/*<Form onSubmit={this.addComment}>*/}
-              {/*<FormGroup>*/}
-                {/*<Input type="textarea" placeholder="comments?  starting point for a flame war?" onChange={(evt) => this.setState({ comment: evt.target.value })}></Input>*/}
-                {/*<Button type="submit" color="success">Add This Comment!</Button>*/}
-              {/*</FormGroup>*/}
-            {/*</Form>*/}
-            <CommentAdd routeId={rockRoute.id}/>
+            <CommentAdd routeId={rockRoute.id} addComment={this.addComment}/>
           </div>
         </Row>
       </div>
