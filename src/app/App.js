@@ -9,6 +9,7 @@ import RockRouteEdit from '../routes/RockRouteEdit'
 import RockRouteDetail from '../routes/RockRouteDetail'
 import Login from '../auth/Login'
 import AppHeader from '../header/AppHeader'
+import Climber from '../climber/Climber'
 import Auth from '../auth/Auth'
 
 
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
             <Route exact path="/addrockroute" component={RockRouteAdd}/>
             <Route exact path="/rockroutedetail/:id/edit" component={RockRouteEdit}/>
+            <Route exact Path="/climber" component={Climber}/>
           </Switch>
         </div>
       </div>

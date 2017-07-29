@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { fetchRouteById, addComment } from '../graphql/routes.graph'
 import CommentAdd from '../comments/CommentAdd'
+import CommentList from '../comments/CommentList'
 
 class RockRouteDetail extends Component {
   constructor () {
@@ -26,7 +27,7 @@ class RockRouteDetail extends Component {
               {/*<Media object data-src="../resources/shitThumb.gif/40x40" alt="Generic placeholder image" />*/}
             </Media>
             <Media body>
-              <Media heading>i am a comment</Media>
+              <Media heading>{comment.user}</Media>
               {comment.comment}
             </Media>
           </Media>
@@ -48,6 +49,7 @@ class RockRouteDetail extends Component {
         <Row>
           <div className="col-6">
             <div>
+              <CommentList routeId={rockRoute.id}/>
               {commentsToDisplay}
             </div>
           </div>

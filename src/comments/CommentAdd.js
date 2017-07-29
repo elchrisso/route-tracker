@@ -52,7 +52,7 @@ class CommentAdd extends Component {
 }
 
 CommentAdd.propTypes ={
-  routeId: PropTypes.string.isRequired,
+  routeId: PropTypes.string.isRequired
 }
 
 const mapStateToProps = (state) => {
