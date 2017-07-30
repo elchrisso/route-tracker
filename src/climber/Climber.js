@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import ClimberService from './service'
 
+import ClimberEdit from './ClimberEdit'
+
 class Climber extends Component {
   constructor () {
     super ()
@@ -11,9 +13,14 @@ class Climber extends Component {
   }
 
   renderClimber (climber) {
-    return (<h1>
-      Welcome {climber.profile.name}
-    </h1>)
+    return (
+      <div>
+        <h1>
+          Welcome {climber.profile.name}
+        </h1>
+        <ClimberEdit/>
+      </div>
+    )
   }
 
   render() {
