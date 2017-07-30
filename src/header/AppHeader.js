@@ -31,7 +31,7 @@ class AppHeader extends Component {
     let userLinkText = "LogIn"
     if (this.props.userInfo !== null) {
       userLinkText = this.props.userInfo.profile.name + "'s Account"
-      userLink = "/climber" //add /{userId} to the end of this once climber page is aware of a user
+      userLink = "/climber/" + this.props.userInfo.id
     }
     return (
       <Navbar color="faded" light toggleable>

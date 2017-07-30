@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
             <Route exact path="/addrockroute" component={RockRouteAdd}/>
             <Route exact path="/rockroutedetail/:id/edit" component={RockRouteEdit}/>
-            <Route exact Path="/climber" component={Climber}/>
+            <Route exact Path="/climber/:id" component={Climber}/>
           </Switch>
         </div>
       </div>

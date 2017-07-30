@@ -11,9 +11,8 @@ import { login, loginSuccess, loginError } from './actions'
 import LoginForm from './LoginForm'
 
 class Login extends Component {
-  handleLoginAttempt = (data) => {
-    this.props.dispatch(login())
 
+  handleLoginAttempt = (data) => {
     this.props.mutate({
       variables: data
     }).then((response) => {
