@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 class LoginForm extends Component {
   constructor (props) {
@@ -29,6 +30,9 @@ class LoginForm extends Component {
           <Input type="password" id="password" onChange={(evt) => this.setState({ password: evt.target.value })}/>
         </FormGroup>
         <Button type="submit" color="primary" block disabled={this.props.loading}>Sign In</Button>
+        <FormGroup>
+          <Link to="/addaccount">Need to Create an Account?</Link>
+        </FormGroup>
       </Form>
     )
   }

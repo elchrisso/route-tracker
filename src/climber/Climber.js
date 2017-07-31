@@ -8,15 +8,15 @@ class Climber extends Component {
   constructor () {
     super ()
     this.state = {
-      name: ''
+      climber: ''
     }
   }
 
-  renderClimber (climber) {
+  renderClimber () {
     return (
       <div>
         <h1>
-          Welcome {climber.profile.name}
+          Welcome {this.props.data.user.profile.name}
         </h1>
         <ClimberEdit/>
       </div>

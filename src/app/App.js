@@ -10,6 +10,7 @@ import RockRouteDetail from '../routes/RockRouteDetail'
 import Login from '../auth/Login'
 import AppHeader from '../header/AppHeader'
 import Climber from '../climber/Climber'
+import AccountAdd from '../accounts/AccountAdd'
 import Auth from '../auth/Auth'
 
 
@@ -27,7 +28,8 @@ class App extends Component {
             <Route exact path="/rockroutedetail/:id" component={RockRouteDetail}/>
             <Route exact path="/addrockroute" component={RockRouteAdd}/>
             <Route exact path="/rockroutedetail/:id/edit" component={RockRouteEdit}/>
-            <Route exact Path="/climber/:id" component={Climber}/>
+            <Route exact path="/climber/:id" component={Climber}/>
+            <Route exact path="/addaccount" component={AccountAdd}/>
           </Switch>
         </div>
       </div>
