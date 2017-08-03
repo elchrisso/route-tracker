@@ -2,7 +2,7 @@ import { gql } from 'react-apollo'
 
 class AccountsService {
   addNewAccount = gql`
-    mutation ($name: String, $email: String!, $password: String!) {
+    mutation ($name: String!, $email: String!, $password: String!) {
       createUser(
         profile: {
           name: $name
@@ -22,3 +22,5 @@ class AccountsService {
     }
   `
 }
+
+export default new AccountsService()

@@ -1,17 +1,38 @@
 import React, { Component } from 'react'
-import { Form, Button } from  'reactstrap'
+import { Form, Input, Button } from  'reactstrap'
+import { graphql } from 'react-apollo'
+
+import AccountsService from './service'
 
 class AccountAdd extends Component {
-  handleSubmit = (evt) => {
+  constructor () {
+    super ()
+    this.state = {
+      name: '',
+      email: '',
+      password: ''
+    }
+  }
+
+  handleAddAccount = (evt) => {
     evt.preventDefault()
-    console.log("i am the add account handler")
+    this.props.mutate({
+      variables: {
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password
+      }
+    })
   }
 
   render () {
     return (
       <div>
         <h1>AccountAdd</h1>
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleAddAccount}>
+          <Input type="text" placeholder="name" onChange={(evt) => this.setState({ name: evt.target.value })} />
+          <Input type="text" placeholder="email" onChange={(evt) => this.setState({ email: evt.target.value })} />
+          <Input type="text" placeholder="password" onChange={(evt) => this.setState({ password: evt.target.value })} />
           <Button type="submit">Create Account</Button>
         </Form>
       </div>
@@ -19,4 +40,4 @@ class AccountAdd extends Component {
   }
 }
 
-export default AccountAdd
+export default graphql(AccountsService.addNewAccount)(AccountAdd)
