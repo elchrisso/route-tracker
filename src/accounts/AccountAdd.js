@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import { Form, Input, Button } from  'reactstrap'
+import { Container, Row, Col, Card, CardHeader, CardBlock, Alert } from  'reactstrap'
 import { graphql } from 'react-apollo'
+import AccountAddForm from './AccountAddForm'
+import { NavLink } from 'react-router-dom'
 
 import AccountsService from './service'
+import './AccountAdd.css'
 
 class AccountAdd extends Component {
   constructor () {
@@ -14,28 +17,28 @@ class AccountAdd extends Component {
     }
   }
 
-  handleAddAccount = (evt) => {
-    evt.preventDefault()
+  handleAddAccount = (data) => {
     this.props.mutate({
-      variables: {
-        name: this.state.name,
-        email: this.state.email,
-        password: this.state.password
-      }
-    })
+      variables: data
+    }).then(console.log("user added"))
+      .catch(console.log("failed to add user"))
   }
 
   render () {
     return (
-      <div>
-        <h1>AccountAdd</h1>
-        <Form onSubmit={this.handleAddAccount}>
-          <Input type="text" placeholder="name" onChange={(evt) => this.setState({ name: evt.target.value })} />
-          <Input type="text" placeholder="email" onChange={(evt) => this.setState({ email: evt.target.value })} />
-          <Input type="text" placeholder="password" onChange={(evt) => this.setState({ password: evt.target.value })} />
-          <Button type="submit">Create Account</Button>
-        </Form>
-      </div>
+      <Container className="accountAdd-container">
+        <Row>
+          <Col>
+            <Card>
+              <CardHeader>Add your account here</CardHeader>
+              <CardBlock>
+                <AccountAddForm onSubmit={this.handleAddAccount}/>
+                <NavLink to="/login">Back to Login</NavLink>
+              </CardBlock>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }

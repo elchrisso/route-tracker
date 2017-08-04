@@ -1,13 +1,11 @@
 import './Login.css'
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Container, Row, Col, Card, CardHeader, CardBlock, Alert } from 'reactstrap'
 import { graphql } from 'react-apollo'
 import { connect } from 'react-redux'
-import { Redirect, Link } from 'react-router-dom'
 
 import AuthService from './service'
-import { login, loginSuccess, loginError } from './actions'
+import { loginSuccess, loginError } from './actions'
 import LoginForm from './LoginForm'
 
 class Login extends Component {
@@ -57,13 +55,6 @@ class Login extends Component {
     )
   }
 }
-
-// Login.propTypes = {
-//   error: PropTypes.string,
-//   loggingIn: PropTypes.bool.isRequired,
-//   signedUp: PropTypes.bool.isRequired,
-//   token: PropTypes.string
-// }
 
 const mapStateToProps = (state) => {
   return {
