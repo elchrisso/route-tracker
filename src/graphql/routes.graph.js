@@ -2,19 +2,19 @@ import { gql } from 'react-apollo'
 
 export const fetchAllRoutes = gql`
   {
-    allRoutes {
-      id
+    allRockRoutes {
+      _id
       name
-      sent
-      style
-      grade
+#      sent
+#      style
+#      grade
     }
   }
 `
 
 export const fetchRouteById = gql`
   query ($id: ID!) {
-    Route(id: $id) {
+    RockRoute(id: $id) {
       id
       name
       grade

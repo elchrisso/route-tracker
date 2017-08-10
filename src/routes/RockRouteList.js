@@ -38,8 +38,8 @@ class RockRouteList extends Component {
       return <h1>Loading routeList yo</h1>
     }
 
-    if (this.props.data.allRoutes) {
-      routes = this.props.data.allRoutes.map((route) => {
+    if (this.props.data.allRockRoutes) {
+      routes = this.props.data.allRockRoutes.map((route) => {
         return (
           <tr key={route.id}>
             {console.log(route.name + " " + route.style + " " + route.grade)}
